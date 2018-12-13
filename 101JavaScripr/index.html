@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript101</title>
+    <style>
+        span{color:red;}
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo natus eos perferendis numquam quasi! Expedita quisquam est reprehenderit facere fuga porro doloremque, reiciendis corrupti, cumque molestias obcaecati perferendis similique veritatis sunt ea nisi debitis consequatur quaerat sint repellat unde hic incidunt necessitatibus. Placeat accusantium tenetur hic explicabo rem voluptates et?</p>
+    <p id="paragrafas">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis repellendus necessitatibus, architecto eos modi assumenda qui distinctio suscipit earum amet provident quasi inventore eaque quia. Similique reprehenderit sapiente unde, mollitia hic iusto quo quis magnam eaque molestiae! Fuga praesentium similique obcaecati ut, dolores, adipisci tenetur corrupti error minus cumque iusto!</p>
+    <p>Lorem ipsum, dolor sit amet  consectetur adipisicing elit. Voluptates doloremque consectetur reprehenderit repudiandae ipsum rerum totam dolores incidunt earum unde magnam consequatur iusto veritatis natus, eum ad. Laboriosam vel quas harum eaque qui modi impedit nostrum, autem illo fugiat exercitationem quibusdam sequi nam alias voluptate quo inventore mollitia, repellat perferendis.</p>
+<br><br><br>
+
+
+    <button onclick="document.getElementById('pirmas').innerHTML=Date();">Labas</button>
+    <button onclick="document.getElementById('antras').innerHTML=Date();">Labs</button>
+    <p id="pirmas">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sequi recusandae dolorem placeat soluta exercitationem!</p><br>
+    <p id="antras">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sit, dolore ducimus unde quasi veritatis totam libero delectus accusantium eaque!</p>
+
+    <br>
+    <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+
+    <button onclick="document.getElementById('trecias').style.fontSize='35px';">
+        Pakeisti dydį
+    </button>
+    <button onclick="document.getElementById('trecias').style.color='red';">
+        Pakeisti spalvą
+    </button>
+    <button onclick="document.getElementById('trecias').style=' '">
+        Atstatyti
+    </button>
+    <button onclick="document.getElementById('trecias').style.fontSize='3px'">
+        Labai mažas
+    </button>
+    <button onclick="document.getElementById('trecias').style.fontWeight='Bold'">
+        Pastorinti
+    </button>
+    <button onclick="document.getElementById('trecias').style.fontStyle='Italic'">
+        Pasviras
+    </button>
+    <button onclick="document.getElementById('trecias').style.fontWeight=''">
+        UnBold
+    </button>
+
+
+
+    <p id="trecias">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam id nemo reprehenderit corrupti voluptates sapiente! Iure obcaecati vitae expedita ut!</p>
+
+    <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+
+    <button onclick="document.getElementById('lempute').src='pic_bulbon.gif'">
+        Lempute ijungta
+    </button>
+
+    <button onclick="document.getElementById('lempute').src='pic_bulboff.gif'">
+        Lempute isjungta
+    </button>
+    <br>
+    <br>
+
+
+    <img src="pic_bulboff.gif" alt="lempute" id="lempute">
+
+    <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+
+    <br>
+    <button onclick="document.getElementById('ketvirtas').style.background='red';">
+        Pakeisti spalvą
+    </button>
+    <button onclick="document.getElementById('ketvirtas').style.background='black';">
+        Gražinti spalvą
+    </button>
+
+
+    <br>
+
+    <div class="container" id="ketvirtas"></div>
+    <br><br><br>
+
+    <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+    <br>
+
+    <button onclick="pakeisti()">Pakeisti teksta</button>
+    <button onclick="pakeistiviska()">Pakeisti viska</button>
+    <p id="penktas">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum iusto perspiciatis odit nihil voluptas reprehenderit sit quae, aliquam exercitationem aperiam?</p>
+    <p id="sestas">dolor sit amet, consectetur adipisicing elit. Cum iusto perspiciatis odit nihil voluptas reprehenderit sit quae, aliquam exercitationem aperiam?</p>
+    <p id="septintas">consectetur adipisicing elit. Cum iusto perspiciatis odit nihil voluptas reprehenderit sit quae, aliquam exercitationem aperiam?</p>
+    <p id="astuntas">ipsum dolor sit amet, consectetur adipisicing elit. Cum iusto perspiciatis odit nihil voluptas reprehenderit sit quae, aliquam exercitationem aperiam?</p>
+
+
+
+
+    <script>
+        function pakeisti(){
+            document.getElementById('penktas').innerHTML="Naujas tekstas" ;
+        }
+        function pakeistiviska(){
+            document.getElementById('penktas').innerHTML="Naujas tekstas" ;
+        }
+        
+    
+    </script>
+
+<p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<br>
+
+<button onclick="pakeisti('devintas', 'vienas du trys')">Devintas</button>
+<button onclick="pakeisti('desimtas', 'batai kuparanugaris meskas')">Desimtas</button>
+<button onclick="pakeisti('vienuoliktas', 'stalas kedes medziai')">Vienuoliktas</button>
+<button onclick="pakeisti('dvyliktas', 'gyvate is obels ilipo i berza')">Dvyliktas</button>
+
+
+<p id="devintas">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum iusto perspiciatis odit nihil voluptas reprehenderit sit quae, aliquam exercitationem aperiam?</p>
+<p id="desimtas">dolor sit amet, consectetur adipisicing elit. Cum iusto perspiciatis odit nihil voluptas reprehenderit sit quae, aliquam exercitationem aperiam?</p>
+<p id="vienuoliktas">consectetur adipisicing elit. Cum iusto perspiciatis odit nihil voluptas reprehenderit sit quae, aliquam exercitationem aperiam?</p>
+<p id="dvyliktas">ipsum dolor sit amet, consectetur adipisicing elit. Cum iusto perspiciatis odit nihil voluptas reprehenderit sit quae, aliquam exercitationem aperiam?</p>
+
+
+
+
+<script>
+    function pakeisti(elementas, tekstas){
+        document.getElementById(elementas).innerHTML= tekstas ;
+    }
+   
+    
+
+</script>
+
+<p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+
+<br>
+
+<button onclick="pakeisti('tryliktas', 'vienas du trys')">Tryliktas</button>
+<button onclick="pakeisti('keturioliktas', 'batai kuparanugaris meskas')">Keturioliktas</button>
+<button onclick="pakeisti('penkioliktas', 'stalas kedes medziai')">Penkioliktas</button>
+<button onclick="pakeisti('sesioliktas', 'gyvate is obels ilipo i berza')">Sesioliktas</button>
+<button onclick="pakeististori('sesioliktas', 'Bold')">Pakeisti stori</button>
+<button onclick="pakeistikelis()">Pakeisti kelis</button>
+<button onclick="trysstori('Bold')">Pakeisti 3 stori</button>
+<button onclick="pakeisti('astuoniolika', 'Naujas tekstas paties sugalvotas')">Astuonioliktas</button>
+
+
+<p id="tryliktas">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum iusto perspiciatis odit nihil voluptas reprehenderit sit quae, aliquam exercitationem aperiam?</p>
+<p id="keturioliktas">dolor sit amet, consectetur adipisicing elit. Cum iusto perspiciatis odit nihil voluptas reprehenderit sit quae, aliquam exercitationem aperiam?</p>
+<p id="penkioliktas">consectetur adipisicing elit. Cum iusto perspiciatis odit nihil voluptas reprehenderit sit quae, aliquam exercitationem aperiam?</p>
+<p id="sesioliktas">ipsum dolor sit amet, consectetur adipisicing elit. Cum iusto perspiciatis odit nihil voluptas reprehenderit sit quae, aliquam exercitationem aperiam?</p>
+<p id="astuoniolika">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit maiores at sunt atque error et similique quas, aut eveniet eos minima amet excepturi. Officia neque fuga nemo inventore facilis, voluptas nam perferendis, iusto repudiandae debitis non suscipit! Repudiandae quaerat alias a fuga, incidunt tempora, enim sequi deserunt expedita est neque.</p>
+
+
+
+<script>
+    function pakeisti(elementas, tekstas){
+        document.getElementById(elementas).innerHTML= tekstas ;
+    }
+    function pakeististori(elementas, stilius){
+        document.getElementById(elementas).style.fontWeight = stilius ;
+    }
+    function pakeistikelis(){
+        document.getElementById('keturioliktas').style.fontSize='35px';
+        document.getElementById('penkioliktas').style.color='green';
+    }
+    function trysstori(stilius){
+        document.getElementById('tryliktas').style.fontWeight = stilius ;
+        document.getElementById('keturioliktas').style.fontWeight = stilius ;
+        document.getElementById('penkioliktas').style.fontWeight = stilius ;
+    }
+</script>
+<script src="7.js"></script>
+
+
+
+
+
+   
+   <script>
+       /*document.getElementById("paragrafas").innerHTML="naujas tekstas";*/
+        document.getElementById("paragrafas").innerHTML="egege egtger regerg<span> ergegerge egegee </span>egerg erge";
+    </script>
+</body>
+</html>

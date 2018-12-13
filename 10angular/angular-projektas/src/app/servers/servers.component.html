@@ -1,0 +1,33 @@
+
+<label>
+  Serverio pavadinimas
+</label>
+
+<!--
+<input type="text" class="form-control" 
+      (input)="onUpdateServer($event)" >
+-->
+
+<input type="text" class="form-control" 
+      [(ngModel)]="serverName" >
+
+
+<p>
+  <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">
+    Prid4ti server5
+  </button>
+</p>
+
+<!-- <p [innerText]="allowNewServer"></p> 
+ 
+  <p>{{serverCreationStatus}}</p>
+
+<p>{{ serverName }}</p>
+-->
+<p *ngIf="serverCreated">
+  Serveris sukurtas, jo pavadinimas {{serverName}} ;
+</p>
+
+
+
+<app-server *ngFor="let server of servers"></app-server>
