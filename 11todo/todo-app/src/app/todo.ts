@@ -3,7 +3,7 @@ export class Todo {
     title: string = ' ' ;
     complete: boolean = false;
 
-    constructor(vlues: Object = {}){
+    constructor(values: Object = {}){
         Object.assign(this, values);
 
         let todo = new Todo({

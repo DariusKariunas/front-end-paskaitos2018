@@ -67,9 +67,9 @@ describe('TodoDataService', () => {
       service.addTodo(todo1);
       service.addTodo(todo2);
       expect(service.getAllTodos()).toEqual([todo1, todo2]);
-      service.deleteTodoById(1);
+      service.deleteTodoById();
       expect(service.getAllTodos()).toEqual([todo2]);
-      service.deleteTodoById(2);
+      service.deleteTodoById();
       expect(service.getAllTodos()).toEqual([]);
     }));
 
@@ -79,7 +79,7 @@ describe('TodoDataService', () => {
       service.addTodo(todo1);
       service.addTodo(todo2);
       expect(service.getAllTodos()).toEqual([todo1, todo2]);
-      service.deleteTodoById(3);
+      service.deleteTodoById();
       expect(service.getAllTodos()).toEqual([todo1, todo2]);
     }));
 

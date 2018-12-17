@@ -27,6 +27,10 @@ export class TodoDataService {
     return todo;
   }
 
+    deleteTodoById(){
+      
+    }
+
     getAllTodos():Todo[]{
       return this.todos;
     }
@@ -38,10 +42,12 @@ export class TodoDataService {
     }
 
     toggleTodoComplete(todo: Todo){
-      let updateTodo = this.updateTodoById(todo.id,{
+      let updatedTodo = this.updateTodoById(todo.id,{
         complete: !todo.complete
       });
       return updatedTodo;
     }
+
+
 
 }

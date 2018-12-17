@@ -8,13 +8,16 @@
       (input)="onUpdateServer($event)" >
 -->
 
-<input type="text" class="form-control" 
-      [(ngModel)]="serverName" >
-
+<input
+  placeholder="add new server"
+  type="text"
+  class="form-control" 
+  [(ngModel)]="serverName"
+>
 
 <p>
   <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">
-    Prid4ti server5
+    Prideti serveri
   </button>
 </p>
 
@@ -27,7 +30,17 @@
 <p *ngIf="serverCreated">
   Serveris sukurtas, jo pavadinimas {{serverName}} ;
 </p>
-
-
-
-<app-server *ngFor="let server of servers"></app-server>
+<p *ngIf="servers.length === 0">
+    Ner servewriu
+</p>
+<div class="list">
+  <p
+    *ngFor="let server of servers"
+    [ngClass]="{'online':getServerStatus(server)}"  
+  >
+    serveris su id {{server.id}} yra {{getServerStatus(server)}} {{server.name}}
+    <button (click)="onTaskRemove(server.id)">
+      x
+    </button>
+  </p>  
+</div>
