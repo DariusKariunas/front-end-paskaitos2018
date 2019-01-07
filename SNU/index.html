@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type='text/javascript'>
+    var map, directionsManager;
+    function GetMap()
+    {
+        map = new Microsoft.Maps.Map('#myMap', {});
+        //Load the directions module.
+        Microsoft.Maps.loadModule('Microsoft.Maps.Directions', function () {
+            //Create an instance of the directions manager.
+            directionsManager = new Microsoft.Maps.Directions.DirectionsManager(map);
+            //Specify where to display the route instructions.
+            directionsManager.setRenderOptions({ itineraryContainer: '#directionsItinerary' });
+            //Specify the where to display the input panel
+            directionsManager.showInputPanel('directionsPanel');
+        });
+    }
+    function GetDirections() {
+        //Clear any previously calculated directions.
+        directionsManager.clearAll();
+        directionsManager.clearDisplay();
+        //Create waypoints to route between.
+        var start = new Microsoft.Maps.Directions.Waypoint({ address: document.getElementById('fromTbx').value });
+        directionsManager.addWaypoint(start);
+        var end = new Microsoft.Maps.Directions.Waypoint({ address: document.getElementById('toTbx').value });
+        directionsManager.addWaypoint(end);
+        //Calculate directions.
+        directionsManager.calculateDirections();
+    }
+    </script>
+    <script 
+        type='text/javascript'
+        src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AmQVHuojATmRiCmfMxmj9mAdYUe_xYCqcR90NmxKhJAS89eKDcICQY-tkkKXRNkx' 
+        async defer
+    >
+    </script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+        <nav id="navigation" class="navbar sticky-top navbar-expand-lg navbar-light bg-light ">
+                <a class="navbar-brand" href="index.html">SNU</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About project</a>
+                    </li>
+          
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Connect</a>
+                    </li>
+          
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact us</a>
+                    </li>              
+                  </ul>  
+                </div>
+        </nav>
+
+
+    <div 
+        id="myMap"
+        style="
+            position:sticky;
+            margin: 0px;
+            padding: 0px;           
+            height:100vh;"
+    >
+    </div>
+
+    
+
+    
+</body>
+</html>

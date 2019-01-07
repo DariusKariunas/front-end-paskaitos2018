@@ -1,3 +1,60 @@
+<label>
+    Server name
+  </label>
+  <!--
+  <input 
+    type="text" 
+    class="form-control"
+    (input)="onUpdateServer($event)"
+  >
+  -->
+  
+  <input 
+    placeholder="add new server"
+    type="text" 
+    class="form-control" 
+    [(ngModel)]="serverName" 
+  >
+  
+  <p>
+    <button 
+    class="btn btn-primary" 
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()"
+    >
+      Add task
+    </button>
+  </p>
+  
+  <!--
+     <p>{{ serverName }}</p>
+     <p>{{ serverCreationStatus }}</p>
+  -->
+  
+  <p *ngIf="serverCreated">
+    Server {{ serverName }} is created
+  </p>
+  
+  <p *ngIf="server.length === 0" >
+    Servers list is empty
+  </p>
+
+
+<div class="list">
+  
+    <p *ngFor="let server of servers"
+    [ngClass]="{ 'turned On': getServerStatus(server)}" 
+    >
+    Server with id {{server.id}} is {{getServerStatus(server)}} {{server.name}}
+  
+      <button (click)="onTaskRemove(server.id)" > 
+        X
+      </button>
+    </p>
+  </div>
+
+
+
 <p [ngStyle]="{ 'background-color': getColor() }"
   [ngClass]= "{ 'online' : serverStatus === 'turned On' }">
   Server with id {{serverId}} is {{ getServerStatus() }}
