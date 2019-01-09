@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { GmapsComponent } from './gmaps/gmaps.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    GmapsComponent,
     
   ],
   imports: [
