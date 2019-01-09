@@ -1,9 +1,3 @@
-<!--
-
-<agm-map [latitude]="lat" [longitude]="lng" [zoom] ="13"  >
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-</agm-map>
--->
 <hr>
 
 <agm-map 
@@ -25,8 +19,9 @@
       [markerDraggable]="m.draggable"
       (dragEnd)="markerDragEnd(m, $event)">
       
-    <agm-info-window>
+    <agm-info-window class="info-window">
       <p> 
+        Labas
         <img 
             src="https://www.tasteofhome.com/wp-content/uploads/2018/01/exps32480_MRR153791D09_18_6b-2-696x696.jpg" 
             alt="Parduodama Duona"
@@ -35,12 +30,4 @@
     </agm-info-window>
     
   </agm-marker>
-  
-  <agm-circle [latitude]="lat + 0.3" [longitude]="lng" 
-      [radius]="5000"
-      [fillColor]="'red'"
-      [circleDraggable]="true"
-      [editable]="true">
-  </agm-circle>
-
 </agm-map>
