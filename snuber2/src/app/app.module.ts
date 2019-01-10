@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { GmapsComponent } from './gmaps/gmaps.component';
+import { FooterbarComponent } from './footerbar/footerbar.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { GmapsComponent } from './gmaps/gmaps.component';
     AppComponent,
     NavbarComponent,
     GmapsComponent,
+    FooterbarComponent,
     
   ],
   imports: [
