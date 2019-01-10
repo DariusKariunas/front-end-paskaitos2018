@@ -66,7 +66,7 @@ export class GmapsComponent implements OnInit {
       {id:9,lat:54.8912,lng:23.9371,img:"https:\/\/www.sushiexpress.lt\/wp-content\/uploads\/2018\/03\/neptunas_negazuotas-580x430.jpg",draggable:false},
       {id:10,lat:54.8857,lng:23.8406,img:"http:\/\/www.dvaro.lt\/uploads\/images\/dir5\/5_1.php",draggable:false},
       {id:11,lat:54.8795,lng:23.9041,img:"https:\/\/demotyvacijos.tv3.lt\/media\/demotivators\/demotyvacija.lt_Kur-ji-Ten-ir-problemos.jpg",draggable:false},
-      {id:12,lat:54.9238,lng:23.7936,img:"https:\/\/www.melskitchencafe.com\/wp-content\/uploads\/french-bread1.jpg",draggable:false},
+      {id:12,lat:54.9238,lng:23.7936,img:"https:\/\/www.melskitchencafe.com\/wp-content\/uploads\/french-bread1.jpg",draggable:false}, 
       {id:13,lat:54.9198,lng:24.0545,img:"https:\/\/www.wildwingrestaurants.com\/wp-content\/uploads\/2017\/05\/drinks_beer_tallboys-1.png",draggable:false},
       {id:14,lat:54.9121,lng:23.981,img:"https:\/\/www.sushiexpress.lt\/wp-content\/uploads\/2018\/03\/neptunas_negazuotas-580x430.jpg",draggable:false},
       {id:15,lat:54.8805,lng:23.879,img:"http:\/\/www.dvaro.lt\/uploads\/images\/dir5\/5_1.php",draggable:false}
