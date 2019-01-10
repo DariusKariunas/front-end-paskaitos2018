@@ -1,8 +1,13 @@
 agm-map {
     height: 90vh;
   }
-  .adv-pic{
-     width: 15px;
-     
-     font-size: 3px;
-  }
+  
+agm-info-window{
+   img{
+      width: 30px !important ;
+   }
+}
+.info-window{
+      width:200px !important;
+}
+
