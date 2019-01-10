@@ -3,8 +3,6 @@
   [latitude]="lat"
   [longitude]="lng"
   [zoom]="13"
-
-
   [disableDefaultUI]="false"
   [zoomControl]="false"
   (mapClick)="mapClicked($event)">
@@ -19,13 +17,21 @@
       (dragEnd)="markerDragEnd(m, $event)">
       
     <agm-info-window class="info-window">
-      <p> 
-        Labas
-        <img id="adv-pic"
-            src="https://www.tasteofhome.com/wp-content/uploads/2018/01/exps32480_MRR153791D09_18_6b-2-696x696.jpg" 
-            alt="Parduodama Duona"
-        >
-      </p>
+      <ul id="adv-pic">
+        <li >
+          Labas
+        </li>
+        <li>
+            <img 
+            src="bread.jpg" 
+            alt="Parduodama Duona">
+        </li>
+        <li>
+          Daugiau info <a href="">PM</a> 
+        </li>
+      </ul>
+
+      
     </agm-info-window>
     
   </agm-marker>
