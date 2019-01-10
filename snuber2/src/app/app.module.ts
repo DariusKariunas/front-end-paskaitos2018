@@ -9,6 +9,9 @@ import { AgmCoreModule } from '@agm/core';
 import { GmapsComponent } from './gmaps/gmaps.component';
 import { FooterbarComponent } from './footerbar/footerbar.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -17,6 +20,7 @@ import { FooterbarComponent } from './footerbar/footerbar.component';
     GmapsComponent,
     FooterbarComponent,
     
+    
   ],
   imports: [
     BrowserModule,
@@ -24,6 +28,9 @@ import { FooterbarComponent } from './footerbar/footerbar.component';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA3mCTqdLJTjE6XPFG_hKr6d9NQyPXk1_c'
     }),
+
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
