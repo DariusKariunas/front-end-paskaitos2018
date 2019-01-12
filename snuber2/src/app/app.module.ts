@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { RouterModule, Routes } from '@angular/router';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -10,6 +12,23 @@ import { GmapsComponent } from './gmaps/gmaps.component';
 import { FooterbarComponent } from './footerbar/footerbar.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+
+
+const appRoutes: Routes = [
+  { path: 'app-login', component: LoginComponent },
+  //{ path: 'hero/:id',      component: HeroDetailComponent },
+ /* {
+    path: 'heroes',
+    component: HeroListComponent,
+    data: { title: 'Heroes List' }
+  },
+  { path: '',
+    redirectTo: '/heroes',
+    pathMatch: 'full'
+  },
+ */
+];
 
 
 
@@ -19,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     GmapsComponent,
     FooterbarComponent,
+    LoginComponent,
     
     
   ],
