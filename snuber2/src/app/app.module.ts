@@ -14,12 +14,15 @@ import { FooterbarComponent } from './footerbar/footerbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { GoodsComponent } from './goods/goods.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 const appRoutes: Routes = [
-  { path: 'app-login', component: LoginComponent },
-  { path: 'app-gmaps', component: GmapsComponent }, 
-  { path: 'registration', component: RegistrationComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'gmaps', component: GmapsComponent }, 
+  { path: 'registration', component: RegistrationComponent },
+  { path: 'about-us', component: AboutUsComponent},
 
   //{ path: 'hero/:id',      component: HeroDetailComponent },
  /* {
@@ -44,6 +47,9 @@ const appRoutes: Routes = [
     FooterbarComponent,
     LoginComponent,
     RegistrationComponent,
+    GoodsComponent,
+    AboutUsComponent,
+    
     
     
   ],

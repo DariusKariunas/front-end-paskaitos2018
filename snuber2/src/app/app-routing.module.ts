@@ -3,11 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { GmapsComponent } from './gmaps/gmaps.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 const appRoutes: Routes = [
-  { path: 'app-login', component: LoginComponent },
-  { path: 'app-gmaps', component: GmapsComponent },
-  { path: 'registration', component: RegistrationComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'gmaps', component: GmapsComponent },
+  { path: 'registration', component: RegistrationComponent },
+  { path: 'about-us', component: AboutUsComponent},
  // { path: 'heroes',        component: HeroListComponent },
  // { path: '',   redirectTo: '/heroes', pathMatch: 'full' },
  // { path: '**', component: PageNotFoundComponent }

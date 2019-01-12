@@ -5,7 +5,7 @@ import { MouseEvent } from '@agm/core';
 
 
 @Component({
-  selector: 'app-gmaps',
+  selector: 'gmaps',
   templateUrl: './gmaps.component.html',
   styleUrls: ['./gmaps.component.scss']
 })

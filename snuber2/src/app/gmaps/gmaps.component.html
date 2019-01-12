@@ -16,23 +16,21 @@
       [markerDraggable]="m.draggable"
       (dragEnd)="markerDragEnd(m, $event)">
       
-    <agm-info-window class="info-window">
-      <ul>
-        <li >
-          Labas
-        </li>
-        <li>
-            <img style="width:200px"
-            src={{m.img}} 
-            alt="Parduodama Duona" >
-        </li>
-        <li>
-          Daugiau info <a href="">PM</a> 
-        </li>
-      </ul>
-
-      
-    </agm-info-window>
+      <agm-info-window class="info-window">
+        <ul>
+          <li >
+            On the way
+          </li>
+          <li>
+              <img style="height: 10em"
+              src={{m.img}} 
+              alt="Bread" >
+          </li>
+          <li>
+            More info <a href="">PM</a> 
+          </li>
+        </ul>        
+      </agm-info-window>
     
   </agm-marker>
 </agm-map>
