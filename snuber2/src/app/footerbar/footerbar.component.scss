@@ -1,3 +1,7 @@
+  footer{
+    z-index:-9999;
+  }
+  
   .header-font {
     font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fd1506;
@@ -56,10 +60,15 @@
     color: #ececec;
   }
   .footer {
+    
       background: #EDEFF1;
       height: auto;
-      padding-bottom: 30px;
+      padding-bottom: 0px;
+      margin-top: 0px;
+      
+      
       position: relative;
+      bottom: 0;
       width: 100%;
       border-bottom: 1px solid #CCCCCC;
       border-top: 1px solid #DDDDDD;
