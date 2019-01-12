@@ -5,18 +5,25 @@ import { GmapsComponent } from './gmaps/gmaps.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 
+import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
+
 const appRoutes: Routes = [
   { path: 'login',
-   component: LoginComponent 
+   component: LoginComponent,
+   data: { preload: false }
   },
   { path: 'gmaps',
-   component: GmapsComponent 
+   component: GmapsComponent,
+   //loadChildren: '#GmapsComponent',
+   data: { preload: true } 
   },
   { path: 'registration',
-   component: RegistrationComponent 
+   component: RegistrationComponent,
+   data: { preload: false } 
   },
   { path: 'about-us',
-   component: AboutUsComponent
+   component: AboutUsComponent,
+   data: { preload: false }
   },
  // { path: 'heroes',        component: HeroListComponent },
  // { path: '',   redirectTo: '/heroes', pathMatch: 'full' },
@@ -27,7 +34,8 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true }
+      { enableTracing: true,
+        preloadingStrategy: SelectivePreloadingStrategyService, }
     )
   ],
   exports: [RouterModule]

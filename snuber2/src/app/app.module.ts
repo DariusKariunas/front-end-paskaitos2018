@@ -19,6 +19,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { AuthServiceComponent } from './auth-service/auth-service.component';
 
 
+
+
+
 const appRoutes: Routes = [
   { path: 'login',
    component: LoginComponent 
@@ -31,19 +34,7 @@ const appRoutes: Routes = [
   },
   { path: 'about-us',
    component: AboutUsComponent
-  },
-
-  //{ path: 'hero/:id',      component: HeroDetailComponent },
- /* {
-    path: 'heroes',
-    component: HeroListComponent,
-    data: { title: 'Heroes List' }
-  },
-  { path: '',
-    redirectTo: '/heroes',
-    pathMatch: 'full'
-  },
- */
+  },  
 ];
 
 
@@ -76,6 +67,8 @@ const appRoutes: Routes = [
     ),
 
     HttpClientModule,
+
+    
 
   ],
   providers: [],
