@@ -13,10 +13,14 @@ import { FooterbarComponent } from './footerbar/footerbar.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 const appRoutes: Routes = [
   { path: 'app-login', component: LoginComponent },
+  { path: 'app-gmaps', component: GmapsComponent }, 
+  { path: 'registration', component: RegistrationComponent }
+
   //{ path: 'hero/:id',      component: HeroDetailComponent },
  /* {
     path: 'heroes',
@@ -39,6 +43,7 @@ const appRoutes: Routes = [
     GmapsComponent,
     FooterbarComponent,
     LoginComponent,
+    RegistrationComponent,
     
     
   ],
