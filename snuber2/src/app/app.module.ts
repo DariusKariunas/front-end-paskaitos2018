@@ -16,13 +16,22 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { GoodsComponent } from './goods/goods.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { AuthServiceComponent } from './auth-service/auth-service.component';
 
 
 const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'gmaps', component: GmapsComponent }, 
-  { path: 'registration', component: RegistrationComponent },
-  { path: 'about-us', component: AboutUsComponent},
+  { path: 'login',
+   component: LoginComponent 
+  },
+  { path: 'gmaps',
+   component: GmapsComponent 
+  }, 
+  { path: 'registration',
+   component: RegistrationComponent 
+  },
+  { path: 'about-us',
+   component: AboutUsComponent
+  },
 
   //{ path: 'hero/:id',      component: HeroDetailComponent },
  /* {
@@ -49,6 +58,7 @@ const appRoutes: Routes = [
     RegistrationComponent,
     GoodsComponent,
     AboutUsComponent,
+    AuthServiceComponent,
     
     
     

@@ -6,10 +6,18 @@ import { RegistrationComponent } from './registration/registration.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 
 const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'gmaps', component: GmapsComponent },
-  { path: 'registration', component: RegistrationComponent },
-  { path: 'about-us', component: AboutUsComponent},
+  { path: 'login',
+   component: LoginComponent 
+  },
+  { path: 'gmaps',
+   component: GmapsComponent 
+  },
+  { path: 'registration',
+   component: RegistrationComponent 
+  },
+  { path: 'about-us',
+   component: AboutUsComponent
+  },
  // { path: 'heroes',        component: HeroListComponent },
  // { path: '',   redirectTo: '/heroes', pathMatch: 'full' },
  // { path: '**', component: PageNotFoundComponent }
