@@ -10,19 +10,12 @@ import { MouseEvent } from '@agm/core';
   styleUrls: ['./gmaps.component.scss']
 })
 
-
-
-
-
 export class GmapsComponent implements OnInit {
 
-  constructor() {    
-    
-   }
+  constructor() {     
+  }
 
-  ngOnInit() {
-
-    
+  ngOnInit() {   
   }
 
   title = 'snuber2';  
@@ -33,9 +26,6 @@ export class GmapsComponent implements OnInit {
   zoom : number ;
   previous;
 
-
-  
-
   clickedMarker(infowindow) {
       if (this.previous) {
         this.previous.close();
@@ -43,10 +33,10 @@ export class GmapsComponent implements OnInit {
     this.previous = infowindow;
     //console.log(`clicked the marker: ${label || index}`)
   }
-
   
-  
-  mapClicked($event: MouseEvent) {
+  mapClicked(
+    $event: MouseEvent
+    ) {
     this.markers.push({      
       lat: $event.coords.lat,
       lng: $event.coords.lng,
@@ -55,11 +45,11 @@ export class GmapsComponent implements OnInit {
       id:this.id,
     });
   }
-
-  
-
-  
-  markerDragEnd(m: marker, $event: MouseEvent) {
+ 
+  markerDragEnd(
+    m: marker, 
+    $event: MouseEvent
+    ) {
     console.log('dragEnd', m, $event);
   }
   
