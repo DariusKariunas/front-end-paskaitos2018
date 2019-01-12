@@ -49,6 +49,11 @@ const appRoutes: Routes = [
       apiKey: 'AIzaSyA3mCTqdLJTjE6XPFG_hKr6d9NQyPXk1_c'
     }),
 
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    ),
+
     HttpClientModule,
 
   ],
