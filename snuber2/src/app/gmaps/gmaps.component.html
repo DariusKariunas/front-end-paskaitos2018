@@ -1,40 +1,41 @@
 
-<agm-map 
-  [latitude]="lat"
-  [longitude]="lng"
-  [zoom]="13"
-  [disableDefaultUI]="false"
-  [zoomControl]="false"
-  (mapClick)="mapClicked($event)">
+<div class="container">
+  <agm-map
+    [latitude]="lat"
+    [longitude]="lng"
+    [zoom]="13"
+    [disableDefaultUI]="false"
+    [zoomControl]="false"
+    (mapClick)="mapClicked($event)">
 
-  <agm-marker 
-      *ngFor="let m of markers; let i = index"
-      (markerClick)="clickedMarker(m.label, i)"
-      [latitude]="m.lat"
-      [longitude]="m.lng"
-      [label]="m.label"
-      [markerDraggable]="m.draggable"
-      (dragEnd)="markerDragEnd(m, $event)">
+    <agm-marker 
+        *ngFor="let m of markers; let i = index"
+        (markerClick)="clickedMarker(infowindow)"
+        [latitude]="m.lat"
+        [longitude]="m.lng"
+        [label]="m.label"
+        [markerDraggable]="m.draggable"
+        (dragEnd)="markerDragEnd(m, $event)">
+        
+        <agm-info-window #infowindow class="info-window">
+          <ul>
+            <li >
+              On the way
+            </li>
+            <li>
+                <img style="height: 10em"
+                src={{m.img}} 
+                alt="Bread" >
+            </li>
+            <li>
+              More info <a href="">PM</a> 
+            </li>
+          </ul>        
+        </agm-info-window>
       
-      <agm-info-window class="info-window">
-        <ul>
-          <li >
-            On the way
-          </li>
-          <li>
-              <img style="height: 10em"
-              src={{m.img}} 
-              alt="Bread" >
-          </li>
-          <li>
-            More info <a href="">PM</a> 
-          </li>
-        </ul>        
-      </agm-info-window>
-    
-  </agm-marker>
-</agm-map>
-
+    </agm-marker>
+  </agm-map>
+</div>
 
 
 

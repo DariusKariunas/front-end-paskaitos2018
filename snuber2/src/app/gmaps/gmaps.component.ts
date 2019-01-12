@@ -14,10 +14,9 @@ import { MouseEvent } from '@agm/core';
 
 
 
-
 export class GmapsComponent implements OnInit {
 
-  constructor() {
+  constructor() {    
     
    }
 
@@ -32,12 +31,20 @@ export class GmapsComponent implements OnInit {
   img:string;
   id:number;
   zoom : number ;
+  previous;
 
 
-  clickedMarker(label: string, index: number,img:string,
-    id:number) {
-    console.log(`clicked the marker: ${label || index}`)
+  
+
+  clickedMarker(infowindow) {
+      if (this.previous) {
+        this.previous.close();
+    }
+    this.previous = infowindow;
+    //console.log(`clicked the marker: ${label || index}`)
   }
+
+  
   
   mapClicked($event: MouseEvent) {
     this.markers.push({      
@@ -48,6 +55,9 @@ export class GmapsComponent implements OnInit {
       id:this.id,
     });
   }
+
+  
+
   
   markerDragEnd(m: marker, $event: MouseEvent) {
     console.log('dragEnd', m, $event);
