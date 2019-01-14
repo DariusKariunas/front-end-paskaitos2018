@@ -6,6 +6,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 
 import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
+import { PostsComponent } from './posts/posts.component';
 
 const appRoutes: Routes = [
   { path: 'login',
@@ -25,6 +26,11 @@ const appRoutes: Routes = [
    component: AboutUsComponent,
    data: { preload: false }
   },
+
+  {
+    path: 'posts',
+    component: PostsComponent,
+  }
  // { path: 'heroes',        component: HeroListComponent },
  // { path: '',   redirectTo: '/heroes', pathMatch: 'full' },
  // { path: '**', component: PageNotFoundComponent }

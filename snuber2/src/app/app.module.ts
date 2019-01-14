@@ -19,6 +19,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { AuthServiceComponent } from './auth-service/auth-service.component';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { PostsComponent } from './posts/posts.component';
 
 
 
@@ -52,6 +53,7 @@ const appRoutes: Routes = [
     GoodsComponent,
     AboutUsComponent,
     AuthServiceComponent,
+    PostsComponent,
     
     
     
