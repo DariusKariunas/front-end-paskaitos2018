@@ -1,7 +1,9 @@
-  footer{
-    z-index:-9999;
-  }
-  
+//  footer{
+//    z-index:-9999;
+//  }
+
+
+
   .header-font {
     font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fd1506;
@@ -19,7 +21,7 @@
       color:#d34836;
   }
   .bg-primary {
-   background-color: black !important;
+   background-color:rgb(52,58,64) ;//!important;
   }
   
   
@@ -39,7 +41,7 @@
   {
     width: 50px;
     height: 50px;
-    color:smoke;
+    color: smoke;
     padding: 8px 2px;
     border: 2px solid;
     border-color: smoke;
@@ -61,7 +63,7 @@
   }
   .footer {
     
-      background: #EDEFF1;
+      background:rgb(52,58,64);
       height: auto;
       padding-bottom: 0px;
       margin-top: 0px;
@@ -102,6 +104,10 @@
       display: block;
   }
   .footer a {
-      color: #78828D
+      color: #78828D;
   } 
+
+  .logo-position{
+    text-align: right;
+  }
 

@@ -18,6 +18,8 @@ import { GoodsComponent } from './goods/goods.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AuthServiceComponent } from './auth-service/auth-service.component';
 
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 
 
 
@@ -67,6 +69,8 @@ const appRoutes: Routes = [
     ),
 
     HttpClientModule,
+
+    AngularFontAwesomeModule,
 
     
 
