@@ -23,9 +23,10 @@ class Validation
             if (!preg_match("/^[a-zA-Z ]*$/", $value["name"])) {
                 array_push($this->error, 'Name must contain only letters');
             }
-
+            else{
             if (empty($value['name'])) {
                 array_push($this->error, 'Name is required');
+            }
             }
             if (empty($value['email'])) {
                 array_push($this->error, 'Email is required');
@@ -38,14 +39,16 @@ class Validation
                 array_push($this->error, 'Username is required');
             }
             if (empty($value['password'])) {
-                array_push($this->error, 'Password is required');
+                      array_push($this->error, 'Password is required');
+                }else {
+                if (empty($value['password2'])) {
+                    array_push($this->error, 'Repeat passwor');
+                } else {
+                    if ($value['password'] != $value['password2']) {
+                        array_push($this->error, 'Passwords do not match');
+                    }
+                }
             }
-            else{
-            if ($value['password'] != $value['password2']) {
-                array_push($this->error, 'Passwords do not match');
-            }
-            }
-
     }
     public function error(){
         if (count($this->error) > 0){
