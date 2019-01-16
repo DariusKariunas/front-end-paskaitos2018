@@ -7,3 +7,6 @@ $about = new KCSG\AboutUs();
 $about->aboutUs();
 $foot = new \KCSG\HeaderFooter();
 $foot->footer();
+if(isset($_SESSION['post']) && $_SESSION['post'] == true){
+    session_unset();
+}

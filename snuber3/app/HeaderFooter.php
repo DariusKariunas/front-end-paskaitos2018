@@ -9,7 +9,7 @@ class HeaderFooter
         $this->header = [
             ['route' => '/posts.php', 'name' => 'Add Post'],
             ['route' => '/about.php', 'name' => 'About Us'],
-            ['route' => '/', 'name' => 'Chat'],
+            ['route' => '/profile.php', 'name' => 'Your Posts'],
         ];
         $this->footer = [
             ['social' => 'https://www.facebook.com/', 'i' => 'fa fa-2x fa-fw fa-facebook text-white'],
@@ -59,7 +59,7 @@ class HeaderFooter
     {
         echo "<link href=\"//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">";
         echo "<footer class=\"footer fixed-bottom\">
-  <div class=\"container-fluid bg-primary py-3\">
+  <div class=\"container-fluid py-3\">
     <div class=\"container\">
       <div class=\"row\">
         <div class=\"col-md-7\">
