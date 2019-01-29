@@ -1,4 +1,7 @@
 <?php
+
+
+
 require __DIR__ . '\vendor\autoload.php';
 session_start();
 $head = new \KCSG\HeaderFooter();
@@ -10,3 +13,4 @@ if(isset($_SESSION['logged']) && $_SESSION['logged'] == true){
 }
 $foot = new \KCSG\HeaderFooter();
 $foot->footer();
+

@@ -16,7 +16,8 @@ $mark = $mark1->getMarkers();
 
 
 foreach ($mark as $item) {
-    echo "  
+    echo "
+  
           <script>
                 
             marker = new google.maps.Marker({ position: new google.maps.LatLng". $item['city'] .", map: map});
@@ -24,14 +25,18 @@ foreach ($mark as $item) {
 		 					content: '".$item['product_name']."'   
 		 					+ '</br>' + '".$item['description']."' 
 		 					+ '</br>' + '".$item['address']."'  
-		 					+ '</br>' + '<img width=\"200px\" src='+ '".$item['img']."' +' >  '
-            
-            
+		 					+ '</br>' + '<img width=\"200px\" src='+ '".$item['img']."' +' >  ' + '</br>'
+                        + '<button onclick=\"(".$item['city']." = NULL\")> DELETE THIS </button>' 
             });
-              marker.addListener('click', function() {
-							infowindow.open(map, marker);
-							});            
-  </script>
+              google.maps.event.addListener(marker,'click', (function(marker, infowindow) {
+				return function(){					    
+                if (lastWindow) lastWindow.close();
+                    infowindow.open(map, marker);
+                    lastWindow=infowindow;
+							}}
+							)
+							(marker,infowindow));                            
+            </script>
 
 
 
@@ -41,6 +46,7 @@ foreach ($mark as $item) {
     ;
 }
 
+echo "";
 
 
 
